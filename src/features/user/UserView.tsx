@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { fetchUsers } from "./userSlice"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 
-export const UserView = () => {
+const UserView = () => {
   const user = useAppSelector(state => state.user)
   const dispatch = useAppDispatch()
   const { loading, error, users } = user
@@ -25,3 +25,5 @@ export const UserView = () => {
     </div>
   )
 }
+
+export default UserView

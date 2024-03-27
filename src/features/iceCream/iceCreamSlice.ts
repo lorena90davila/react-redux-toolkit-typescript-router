@@ -14,7 +14,9 @@ const iceCreamSlice = createSlice({
   initialState,
   reducers: {
     ordered: (state) => {
-      state.numIceCreams--;
+      if (state.numIceCreams - 1 >= 0) {
+        state.numIceCreams--;
+      }
     },
     restocked: (state, action: PayloadAction<number>) => {
       state.numIceCreams += action.payload;
