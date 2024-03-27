@@ -16,6 +16,7 @@ function App() {
         <Route path={'ice-cream'} element={<IceCreamView />} />
         <Route path={'user'} element={<UserView />} />
         <Route path={'/'} element={<HomeView />} />
+        <Route path={'*'} element={<p>Not Found</p>} />
       </Routes>
     </>
   )
